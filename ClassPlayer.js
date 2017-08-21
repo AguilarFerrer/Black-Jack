@@ -3,6 +3,7 @@ class Player{
     constructor(){
         this.cards = new Array();
         this.points = 0;
+        this.totalcards = 0;
     }
     
     //Set | Get of cards.
@@ -13,10 +14,14 @@ class Player{
     get point(){ return this.points; }
     set point(value){ this.points = value; }
     
-    //Cleans the array cards.
-    RebootCards(){ this.cards.length = 0; }
+    //Set | Get of totalcards,
+    get totalcard(){ return this.totalcards; }
+    set totalcard(value){ this.totalcards = value; }
+    
+    //Cleans the array cards and totalcards.
+    RebootCards(){ this.cards.length = 0; this.totalcard = 0; }
     
     //Cleans the object.
-    RebootAll(){ this.cards.length = 0; this.point = 0; }
+    RebootAll(){ this.cards.length = 0; this.point = 0; this.totalcards = 0; }
     
 }
