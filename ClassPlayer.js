@@ -4,7 +4,7 @@ class Player{
         this.cards = new Array();
         this.points = 0;
         this.totalcards = 0;
-        this.ace = false;
+        this.aces = false;
     }
     
     //Set | Get of cards.
@@ -20,8 +20,8 @@ class Player{
     set totalcard(value){ this.totalcards = value; }
     
     //Set | Get of ace,
-    get ace(){ return this.ace; }
-    set ace(value){ this.ace = value; }
+    get ace(){ return this.aces; }
+    set ace(value){ this.aces = value; }
     
     //Cleans the array cards and totalcards.
     RebootCards(){ this.cards.length = 0; this.totalcard = 0; }
