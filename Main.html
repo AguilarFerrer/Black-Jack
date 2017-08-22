@@ -1,5 +1,7 @@
 <html>
-    <input type="button" value="Pedir" onclick="GetCard(player, cards)">
+    <div id="crupier"></div>
+    <input type="button" value="Pedir" onclick="Program()">
+    <input type="button" value="Finalizar" onclick="CPU(cpu, cards)">
     <div id="output"></div>
 <script src="Main.js"></script>
 <script>
@@ -10,10 +12,15 @@
     
     GetCard(player, cards);
     GetCard(player, cards);
+    GetCard(cpu, cards);
+    GetCard(cpu, cards);
+    ShowCard("output", player, player.card.length, true);
+    ShowCard("crupier", cpu, 1, false);
     
-    
-    
-    
+    function Program(){
+        GetCard(player, cards);
+        ShowCard("output", player, player.card.length, true);
+    }
     
     
                 
