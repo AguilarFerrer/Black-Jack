@@ -16,11 +16,13 @@ function SubstrCard(obj, i, val1, val2){
 }
 
 function GetCard(obj1, obj2){
-    var pos = Random1to52()-1;
-    while (obj2.used[pos] == true){ pos = Random1to52()-1; }
-    obj1.card = obj2.card[pos];
-    Count(obj1);
-    obj2.used = pos;
+    if (obj1.totalcard < 22){
+        var pos = Random1to52()-1;
+        while (obj2.used[pos] == true){ pos = Random1to52()-1; }
+        obj1.card = obj2.card[pos];
+        Count(obj1);
+        obj2.used = pos;
+    }
 }
 
 function Count(obj){          
